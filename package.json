@@ -1,0 +1,22 @@
+{
+  "name": "snabdom-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "snabbdom": "^3.4.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.4.1",
+    "parcel-bundler": "^1.12.5"
+  },
+  "source": true
+}
