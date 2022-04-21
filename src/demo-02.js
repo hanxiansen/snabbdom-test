@@ -7,7 +7,6 @@ import {
   init,
 } from "snabbdom";
 
-// debugger
 const patch = init([
   // Init patch function with chosen modules
   classModule, // makes it easy to toggle classes
@@ -15,6 +14,9 @@ const patch = init([
   styleModule, // handles styling on elements with support for animations
   eventListenersModule, // attaches event listeners
 ]);
+
+// debugger
+
 // 创建一个 vnode
 var vnode = h('div#container.two.classes', { on: { click: () => {} } }, [
   h('span', { style: { fontWeight: 'bold' } }, '这只是普通文本'),

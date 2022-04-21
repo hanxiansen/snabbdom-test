@@ -1,5 +1,5 @@
-import { h } from 'snabbdom/src/package/h'
-import { init } from 'snabbdom/src/package/init'
+import { h } from 'snabbdom/src/h'
+import { init } from 'snabbdom/src/init'
 
 // 参数：数组，传入模块
 // 返回值：patch 函数，作用对比两个 vnode 的差异并更新到真实的 DOM
