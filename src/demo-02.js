@@ -17,21 +17,28 @@ const patch = init([
 
 // debugger
 
-// 创建一个 vnode
+// 1. 创建一个 vnode
 var vnode = h('div#container.two.classes', { on: { click: () => {} } }, [
-  h('span', { style: { fontWeight: 'bold' } }, '这只是普通文本'),
-  ' and this is just normal text',
-  h('a', { props: { href: '/foo' } }, '这是一个链接!')
+  h('p', {key: 'A'}, 'old-A'),
+  h('p', {key: 'B'}, 'old-B'),
+  h('p', {key: 'I'}, 'old-I'),
+  h('p', {key: 'E'}, 'old-E'),
+  h('p', {key: 'F'}, 'old-F'),
+  h('p', {key: 'G'}, 'old-G'),
 ]);
-// 选择容器
+// 2. 选择容器
 var container = document.getElementById('container');
-// 将vnode patch到容器中
+// 3. 将 vnode patch到容器中
 patch(container, vnode);
-// 生成一个新的vnode
+// 4. 生成一个新的vnode
 var newVnode = h('div#container.two.classes', { on: { click: () => {} } }, [
-  h('span', { style: { fontWeight: 'normal', fontStyle: 'italic' } }, '现在是斜体类型文本'),
-  ' and this is still just normal text',
-  h('a', { props: { href: '/bar' } }, '这是一个链接!')
+  h('p', { key: 'A' }, 'new-A'),
+  h('p', { key: 'F' }, 'new-F'),
+  h('p', { key: 'H' }, 'new-H'),
+  h('p', { key: 'O' }, 'new-O'),
+  h('p', { key: 'I' }, 'new-I'),
+  h('p', { key: 'D' }, 'new-D'),
+  h('p', { key: 'G' }, 'new-G'),
 ]);
-// 用新DOM替换老DOM
+// 5. 用新DOM替换老DOM
 patch(vnode, newVnode);
